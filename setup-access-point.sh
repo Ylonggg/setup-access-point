@@ -50,7 +50,7 @@ sudo iptables -A FORWARD -i eth0 -o wlan0 -m state --state RELATED,ESTABLISHED -
 
 # Comment out this line if you want to access the Pi via SSH when being connected
 # to the Wifi Access Point. You can use: ssh -i "path/to/private/key/file" pi@192.168.4.1
-# sudo iptables -t nat -I PREROUTING -p tcp --dport 22 -j ACCEPT
+sudo iptables -t nat -I PREROUTING -p tcp --dport 22 -j ACCEPT
 
 # Save to be loaded at boot by the netfilter-persistent service
 sudo netfilter-persistent save
